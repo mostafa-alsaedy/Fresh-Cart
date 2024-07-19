@@ -44,7 +44,7 @@ export default function Checkout() {
             const { data } = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}`, values,
                 {
                     headers: { token: localStorage.getItem("userToken") },
-                    params: { url: "http://localhost:3002" }
+                    params: { url: "https://freshcart-main.vercel.app" }
                 }
             )
             window.open(data.session.url, "_blank")
