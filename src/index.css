@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.main-color {
+  color: #40C057;
+}
+
+.productBox {
+  transition: 0.3s all;
+  overflow: hidden;
+}
+
+.productBox:hover {
+  scale: 1.05;
+  transition: 0.3s;
+}
+
+.addCart {
+  transform: translateY(100px);
+  overflow: hidden;
+  transition: 0.3s all;
+}
+
+.productBox:hover .addCart {
+  transform: translateY(0);
+  transition: 0.3s;
+}
+
+a,
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.secondary-color {
+  background-color: orangered;
+}
+
+.categoryDiv {
+  transition: 0.3s all;
+  cursor: pointer;
+}
+
+
+
+.categoryDiv:hover {
+  scale: 1.01;
+  transition: 0.3s;
+  box-shadow: 2px 2px 20px #40C057;
+}
+
+
+.productDiv {
+  transition: 0.3s all;
+  cursor: pointer;
+}
+
+
+
+.productDiv:hover {
+  scale: 1.001;
+  transition: 0.3s;
+  box-shadow: 1px 1px 10px #40C057;
+}
+
+footer .form-control:focus{
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+/* .heartyy:visited{ 
+  color: red;
+} */
