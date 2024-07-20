@@ -2,6 +2,8 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { ThreeDots } from 'react-loader-spinner'
 import { useQuery } from 'react-query'
+import { Helmet } from 'react-helmet';
+
 
 
 export default function Categories() {
@@ -52,6 +54,10 @@ export default function Categories() {
     </>
   }
   return <>
+   <Helmet>
+      <title>Categories</title>
+    </Helmet>
+
     <section>
       <div className="container w-75 my-4">
         <input onChange={(e) => setSearchTerm(e.target.value)} type="text" id='searchBar' name='searchBar' className=' form-control my-5' placeholder='Search by Category' />

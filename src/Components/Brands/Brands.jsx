@@ -2,6 +2,8 @@ import axios from 'axios'
 import React from 'react'
 import { ThreeDots } from 'react-loader-spinner'
 import { useQuery } from 'react-query'
+import { Helmet } from 'react-helmet';
+
 
 
 export default function Brands() {
@@ -36,6 +38,10 @@ export default function Brands() {
 
 
   return <>
+   <Helmet>
+      <title>Brands</title>
+    </Helmet>
+
     <section>
       <div className="container my-5">
         <div className="row gy-5">

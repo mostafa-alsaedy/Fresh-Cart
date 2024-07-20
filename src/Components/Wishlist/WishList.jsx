@@ -4,6 +4,8 @@ import { Oval } from 'react-loader-spinner'
 import toast from 'react-hot-toast'
 import { Link } from 'react-router-dom'
 import { cartContext } from '../context/cartContext'
+import { Helmet } from 'react-helmet';
+
 
 
 
@@ -79,6 +81,10 @@ export default function WishList() {
 
 
     return <>
+     <Helmet>
+      <title>Wish List</title>
+    </Helmet>
+
         <div className="container bg-dark bg-opacity-10 mt-5 rounded rounded-1 px-4 ">
             <h2 className='pt-5 py-4 fw-bold'>My WishList</h2>
             <h5 className='pb-2'>Total Items: <span className='main-color'>{numOfWishListedItems}.</span> </h5>

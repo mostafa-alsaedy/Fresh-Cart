@@ -4,6 +4,8 @@ import axios from "axios"
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ColorRing } from 'react-loader-spinner'
+import { Helmet } from 'react-helmet';
+
 
 
 
@@ -69,6 +71,10 @@ const formikObj = useFormik({
 
 
 return <>
+ <Helmet>
+      <title>Forgot Password</title>
+    </Helmet>
+
     <section className="container m-auto">
     <div className='m-auto w-75'>
         <h1 className='mt-5'>Please enter you e-mail.</h1>

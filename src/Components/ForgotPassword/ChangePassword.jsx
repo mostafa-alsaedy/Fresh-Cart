@@ -5,6 +5,8 @@ import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ColorRing } from 'react-loader-spinner'
 import { authContext } from '../context/authContext'
+import { Helmet } from 'react-helmet';
+
 
 
 
@@ -77,6 +79,10 @@ export default function ChangePassword() {
 
 
     return <>
+     <Helmet>
+      <title>Change Password</title>
+    </Helmet>
+
         <section className="container m-auto">
             <div className='m-auto w-75'>
                 <h3 className='mt-5'>Reset Password</h3>

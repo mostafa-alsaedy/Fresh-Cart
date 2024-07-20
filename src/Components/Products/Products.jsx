@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { cartContext } from '../context/cartContext';
 import toast from 'react-hot-toast';
 import { wishListContext } from '../context/wishListContext';
+import { Helmet } from 'react-helmet';
 
 
 export default function Products({ product }) {
@@ -113,6 +114,9 @@ export default function Products({ product }) {
 
 
   return <>
+    <Helmet>
+      <title>Products</title>
+    </Helmet>
 
     <div className="container mt-5 pb-5">
       <div className="row g-0 mb-5">
@@ -141,12 +145,12 @@ export default function Products({ product }) {
               </Link>
               <div className=' addCart d-flex flex-column justify-content-between align-items-center gap-2'>
                 <div>
-                  <button onClick={() => addProduct(product.id)} style={{width : "200px"}} className='btn btn-success text-center me-2 flex-grow-1'>
+                  <button onClick={() => addProduct(product.id)} style={{ width: "200px" }} className='btn btn-success text-center me-2 flex-grow-1'>
                     <i className='fa-solid fa-plus-square mx-2'></i>Add to Cart
                   </button>
                 </div>
                 <div>
-                  <button onClick={() => addWishList(product.id)} style={{width : "200px"}} className='btn btn-danger text-center me-2 flex-grow-1'>
+                  <button onClick={() => addWishList(product.id)} style={{ width: "200px" }} className='btn btn-danger text-center me-2 flex-grow-1'>
                     <i className='fa-solid fa-heart  mx-2'></i>Add to Wishlist
                   </button>
                 </div>

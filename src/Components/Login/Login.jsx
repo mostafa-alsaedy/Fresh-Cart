@@ -5,6 +5,8 @@ import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ColorRing } from 'react-loader-spinner'
 import { authContext } from "../context/authContext"
+import { Helmet } from 'react-helmet';
+
 
 
 
@@ -13,7 +15,7 @@ export default function Login() {
 
 
   const { setToken } = useContext(authContext)
-  
+
   let user = {
     email: "",
     password: "",
@@ -34,6 +36,7 @@ export default function Login() {
       const { data } = await axios.post("https://ecommerce.routemisr.com/api/v1/auth/signin", values)
       if (data.message === "success") {
         localStorage.setItem("userToken", data.token)
+        console.log(data.token);
         setToken(data.token)
         setSuccessMsg("Logged in successfully.")
         setTimeout(() => {
@@ -79,6 +82,9 @@ export default function Login() {
 
 
   return <>
+    <Helmet>
+      <title>Login</title>
+    </Helmet>
     <section className="container m-auto">
       <div className='m-auto w-75'>
         <h1 className='mt-5'>Login</h1>

@@ -3,16 +3,17 @@ import { cartContext } from '../context/cartContext'
 import { Oval } from 'react-loader-spinner'
 import toast from 'react-hot-toast'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet';
+
 
 
 
 
 export default function Cart() {
 
-    const { cartProducts, totalCartPrice, numOfCartItems, deleteProduct, updateCartProduct, clearShoppingCart } = useContext(cartContext)
+    const { cartProducts, totalCartPrice, numOfCartItems, deleteProduct, updateCartProduct, clearShoppingCart, cartId } = useContext(cartContext)
 
-    console.log("ana aho" , cartProducts);
-
+console.log(cartId);
     if (cartProducts === null) {
         return <>
             <div className='vh-100 d-flex justify-content-center align-items-center'>
@@ -70,6 +71,9 @@ export default function Cart() {
 
 
     return <>
+    <Helmet>
+      <title>Cart</title>
+    </Helmet>
         <div className="container bg-dark bg-opacity-10 mt-5 rounded rounded-1 px-4 ">
             <header className='d-flex justify-content-between align-items-center'>
                 <div>

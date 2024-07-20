@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { jwtDecode } from 'jwt-decode'
 import axios from 'axios'
 import { Oval } from 'react-loader-spinner'
+import { Helmet } from 'react-helmet';
+
 
 export default function AllOrders() {
 
@@ -41,6 +43,10 @@ export default function AllOrders() {
 
     return (
         <>
+            <Helmet>
+                <title>All Orders</title>
+            </Helmet>
+
             <section>
                 <div className="container bg-dark bg-opacity-10 mt-5 rounded rounded-1 px-4 ">
                     <header className='d-flex justify-content-between align-items-center '>

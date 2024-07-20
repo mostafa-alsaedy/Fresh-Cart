@@ -3,6 +3,8 @@ import { useFormik } from "formik"
 import axios from "axios"
 import { useNavigate } from 'react-router-dom'
 import { ColorRing } from  'react-loader-spinner'
+import { Helmet } from 'react-helmet';
+
 
 
 
@@ -85,6 +87,10 @@ export default function Register() {
 
 
   return <>
+   <Helmet>
+      <title>Register</title>
+    </Helmet>
+
     <section className="container m-auto">
       <div className='m-auto w-75'>
         <h1 className='mt-5'>Register Now</h1>
