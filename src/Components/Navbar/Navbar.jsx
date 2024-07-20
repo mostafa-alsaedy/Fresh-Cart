@@ -69,7 +69,7 @@ export default function Navbar() {
                 </NavLink>
               </div> : ""}
               {token ? <div>
-                <NavLink className="nav-link position-relative me-3" to="/cart"><i className='fa-solid fa-heart fs-5 text-danger'></i>
+                <NavLink className="nav-link position-relative me-3" to="/wishlist"><i className='fa-solid fa-heart fs-5 text-danger'></i>
                   <span className="position-absolute top-25 start-75 translate-middle badge rounded-pill bg-secondary">
                     {numOfWishListedItems}
                   </span>
